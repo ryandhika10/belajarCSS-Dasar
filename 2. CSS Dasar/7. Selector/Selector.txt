@@ -1,0 +1,84 @@
+ >> SELECTOR BASIC <<
+
+
+ >> Selector = Utk mengenali elemen HTML yg akan diberi style
+
+ >> Jenis selector yg bisa digunakan : Elemen HTML, id, class, complex 
+    selector
+
+ >> Penerapan selector : 
+
+    => Buat dulu folder yg di dlmnya ada file HTML dan CSS. Di dlm file HTML 
+       ada tag h1 yg diisi "Hello World", ada tag ul dan di dlmnya ada tag li 
+       sebayak 5 yg di dlmnya terdapat tag a diisi tulisan link 1 sampai 5, 
+       kemudian ada tag ol sama seperti tag ul, li nya 5. Ada tag a yg diisi 
+       "WebProgramming", lalu di bawahnya ada 2 tag paragraph yg menyimpan 
+       lorem sebanyak masing-masing 30 kata
+
+    1. Elemen HTML : 
+
+       => Contoh : 
+
+		body{
+			font-family: arial;
+		}
+
+       => Seluruh tulisan di dlm tag body font nya jadi arial
+
+       => Jika kita punya 2 elemen yg sama, kita gk usah nulis satu persatu 
+	  selector lalu isi property yg sama, cukup gunakan separator "," atau 
+	  separator utk grouping pemberian property
+
+       => Contoh selector grouping dgn "," : 
+
+		h1, h2{
+			color: green;
+		}
+
+       => Jika ingin merubah warna tag ol maupun ul, hasilnya tidak akan 
+	  berubah warna, karena yg berubah warna bukan tag ol atau ul, tapi 
+	  tag a di dlmnya, klo selectornya tag a, maka semua tag a akan 
+	  berubah warna, solusi jika kita ingin merubah warna tag ol atau ul 
+	  nya saja adalah dgn menggunakan separator spasi(" ")
+
+       => Contoh selector grouping dgn " " : 
+
+		ul li a{
+			color: orange;
+		}
+
+       => Penjelasan grouping dgn " ", carikan tag a yg ada di dlm tag li, yg 
+	  juga di dlm tag ul, ubah warnanya jadi oren
+
+       => Ketika kita ingin mengubah warna pada kedua tag p berbeda, caranya 
+	  gunakan selector khusus, yaitu id atau class
+
+    2. Selector khusus (id dan class)
+
+       => Contoh id(#) dan class(.): 
+
+	  >> Beri atribut id utk paragraph 1 dan class utk paragraph 2
+
+		#p1{
+			color: orange;
+		}
+
+		.p2{
+			color: red;
+		}
+
+       => Perbedaan id dan class : 
+
+	  >> id : 1. Sebuah elemen HTML hanya boleh memiliki 1 id
+
+		  2. Setiap halaman hanya boleh memiliki 1 elemen dgn id 
+		     tersebut
+
+		  3. Dpt digunakan sebagai penanda halaman utk link
+
+		  4. Digunakan juga utk JavaScript
+
+		  5. Sebaiknya tidak digunakan utk CSS(lebih baik gunakan 
+		     class)
+
+       => Skala prioritas selector : Elemen HTML -> class, jgn gunakan id

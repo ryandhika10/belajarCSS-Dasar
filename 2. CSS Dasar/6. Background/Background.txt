@@ -1,0 +1,83 @@
+ >> PENERAPAN BACKGROUND PADA CSS <<
+
+
+ >> Property Background : 
+
+    1. background-color = Mengatur warna background
+
+    2. background-image = Mengatur gambar yg digunakan utk background
+
+    3. background-position = Mengatur posisi gambar background
+
+    4. background-repeat = Mengatur jenis pengulangan gambar background
+
+ >> Penerapan background : 
+
+    => Buat dulu folder yg di dlmnya ada file HTML dan CSS, bikin folder baru 
+       utk file gambar struktur dasar HTML, hubungkan HTML dan CSS menggunakan 
+       tag link yg ditulis di HTML. Buat tag h1 yg menyimpan tulisan "Hello 
+       World"
+
+    1. Contoh background-color : 
+
+	body{
+		background-color: lightblue;
+	}
+
+       => Hasilnya warna background seluruh halaman akan berubah menjadi biru 
+	  terang
+
+    2. Contoh background-image : 
+
+		background-image: url(gambar/moroccan-flower.png);
+
+       => Utk nama file gambar yg ada spasi, spasi nya ditulis di url dgn 
+	  "%20". Penulisannya berdasarkan penulisan relative URL
+
+       => Hasilnya background seluruhnya akan berubah berdasarkan file gambar
+
+       => Secara default, jika ukuran gambar kecil, gambar background akan 
+	  selalu diulang terhadap sumbu-x dan sumbu-y sehingga halaman penuh 
+	  dgn gambar
+
+       => Web utk mencari gambar background berpola : subtlepatterns.com
+
+    3. background-repeat = Value => repeat-x, repeat-y, no-repeat, repeat
+
+       => Contoh background-repeat : 
+
+		background-repeat: repeat-x;
+
+       => Hasilnya, gambar background akan berulang terhadap sumbu-x
+
+       => Jika value yg digunakan no-repeat, maka kita bisa menggunakan 
+	  property background-position utk mengatur posisi gambar
+
+    4. background-position = Value => terhadap sumbu-y (top/ceter/bottom) dan 
+				      terhadap sumbu-x (left/center/right)
+
+       => Contoh background-position : 
+
+		background-position: top right;
+
+       => Hasilnya, gambar background akan di kanan atas
+
+       => Kalau valuenya bottom center, maka background gambar paling bawah 
+	  akan menyamakan ukuran dari konten yg ada, maka akan tampil gambar 
+	  keluar ke atas, karena konten yg dimiliki hanya h1 "Hello World". 
+	  Solusinya bikin konten baru atau gunakan tag br
+
+ >> Shorthand/singkatan penulisan CSS Background : 
+
+    => Dari ke 4 property, bisa diganti dgn 1 property saja, yaitu background
+
+    => Contoh : 
+
+	background: green url(gambar/moroccan-flower.png) center right 
+	no-repeat;
+
+    => Urutan penulisan value shorthand = background-color, background-image, 
+					  background-position, background-
+					  repeat
+
+    => Urutan background-color dan background-image bisa ditukar

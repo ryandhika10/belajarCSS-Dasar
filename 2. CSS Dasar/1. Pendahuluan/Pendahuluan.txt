@@ -1,0 +1,24 @@
+ >> PENGENALAN CSS <<
+
+
+ >> CSS = Cascading Style Sheet, utk memberi style pada halaman
+
+    => Fungsi -> Memberi warna, ukuran dan posisi ke dlm elemen HTML yg kita 
+		 buat
+
+ >> CSS menurut W3.org = Mekanisme sederhana yg mengatur gaya/style(warna, 
+			 ukuran, posisi, dll) pada halaman web
+
+ >> CSS (Cascading Style Sheet) : 
+
+    1. Aturan yg digunakan utk menampilkan elemen/tag HTML
+
+    2. Dibuat terpisah dgn HTML
+
+    3. Tujuannya utk memisahkan konten dan style
+
+    4. 1 CSS dpt digunakan utk banyak halaman HTML
+
+    5. 1 halaman HTML dpt terlihat berbeda jika menggunakan CSS yg berbeda
+
+ >> HTML dpt tampil berbeda dgn CSS berbeda : Akses www.csszengarden.com

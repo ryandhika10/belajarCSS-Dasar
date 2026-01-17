@@ -1,0 +1,36 @@
+ >> SPECIFICITY <<
+
+
+ >> Specificity = Setiap deklarasi css (selector) memiliki berat yg berbeda. 
+		  berat tersebut menentukan seberapa spesifik sebuah elemen 
+		  dapat dipilih oleh selector
+
+ >> Misal ada 1 tag paragraph diberi 2 CSS dgn selector dan property sama, 
+    namun value berbeda, yg terpilih adalah CSS yg ditulis terakhir. Itu 
+    artinya property kedua akan mengoverride(menimpa) property pertama
+
+ >> Kalau kita tulis 2 selector sama seperti tadi, maka yg akan di ambil 
+    adalah property atau selector paling terakhir
+
+ >> Kalau tag p diberi id, lalu di CSS terdapat 2 selector, yg satu id yg di 
+    select dan yg kedua tag p yg di select yg masing-masing memiliki property 
+    sama, namun valuenya berbeda. Hasilnya selector yg dijalankan adalah 
+    selector id
+
+ >> Karena value pada atribut id pada tag p, lebih spesifik dari tag p
+
+ >> Penghitungan specificity : 
+
+    1. Elemen = Bobotnya 1 digit
+
+    2. Class = Bobotnya 2 digit
+
+    3. Id = Bobotnya 3 digit
+
+    4. inline = Bobotnya 4 digit
+
+ >> Agar saat kita ingin beri style pada elemen yg sudah ada stylenya dgn 
+    bobot specificity besar, kita buat selectornya lebih spesifik dgn menambah 
+    bobot specificity nya agar CSS dpt mengoverride style sebelumnya
+
+ >> Kalkulator specificity : specificity.keegan.st

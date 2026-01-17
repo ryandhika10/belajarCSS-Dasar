@@ -1,0 +1,21 @@
+ >> ANATOMI CSS << 
+
+
+ >> Struktur/Anatomi CSS : selector { property: value; }
+
+    1. selector = 1. Utk memilih dan memanipulasi elemen spesifik HTML
+
+		  2. Elemen HTML dipilih berdasarkan tag, id, class bahkan 
+		     pola/pattern
+
+		  3. Semakin kompleks struktur HTML, selector juga semakin 
+		     kompleks/spesifik
+
+       => Contoh : h1 { color: blue; } -> CSS, pilih seluruh elemen h1, ubah 
+					  teksnya menjadi berwarna biru
+
+    2. property = Lebih dari 350 property yg ada di CSS. Lebih lengkapnya ada 
+		  di : developer.mozilla.org/en-US/docs/Web/CSS/Reference dan 
+		  css-tricks.com/almanac
+
+    3. value = Nilai dari property

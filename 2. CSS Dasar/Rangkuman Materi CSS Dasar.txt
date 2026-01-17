@@ -1,0 +1,412 @@
+ >> PENGENALAN CSS <<
+
+
+ >> CSS (Cascading Style Sheet) = Memberi style pada halaman, memberi warna, 
+				  ukuran dan posisi ke elemen HTML
+
+ >> CSS => w3.org = Mekanisme sederhana yg mengatur style pada halaman web
+
+ >> CSS (Cascading Style Sheet) : 
+
+    1. Aturan yg digunakan utk menampilkan elemen/tag HTML
+
+    2. Dibuat terpisah dgn HTML
+
+    3. Utk memisahkan konten dan style
+
+    4. 1 CSS dpt digunakan utk banyak halaman HTML
+
+    5. 1 halaman HTML dpt terlihat berbeda jika menggunakan CSS yg berbeda
+
+
+ >> ANATOMI CSS <<
+
+
+ >> Anatomi CSS = selector { property: value; }
+
+    1. selector = 1. Utk memilih dan memanipulasi elemen spesifik HTML
+
+		  2. Elemen HTML dipilih berdasarkan tag, id, class bahkan 
+		     pola/pattern
+
+		  3. Semakin kompleks struktur HTML, selector juga semakin 
+		     kompleks/spesifik
+
+    2. property = Lebih 350 property di CSS, lengkapnya : 
+		  developer.mozilla.org/en-US/docs/Web/CSS/Reference dan css-
+		  tricks.com/almanac
+
+    3. value = Nilai dari property
+
+
+ >> PENEMPATAN CSS << 
+
+
+    1. Dlm file HTML : 
+
+       => Embed = Menyimpannya di dlm tag <head></head> menggunakan tag 		  <style></style>
+
+	  >> Contoh : 
+
+		<style>
+			h1{
+				color: lightblue;
+				font-family: arial;
+			}
+		</style>
+
+       => Inline = Menyisipkan di dlm tag HTML menggunakan atribut style 		   (tidak disarankan)
+
+	  >> Contoh : 
+
+		<h1 style="color: lightblue; font-family: arial;">
+
+    2. Terpisah dari file HTML : 
+
+       => External = Membuat file CSS dgn ekstensi .css, hubungkan dgn menulis 
+		     tag <link> di file HTML yg memiliki atribut rel dan href, 
+		     href diisi dgn value yg mengarah ke file CSS yg dibuat 
+		     (berlaku relative url)
+
+	  >> Contoh penerapan tag <link> : 
+
+		<link rel="stylesheet" href="style.css">
+
+	  >> Contoh penulisan external di file CSS :
+
+		h1{
+			color: blue;
+			font-family: arial;
+			font-size: 100px;
+		}
+
+
+ >> PENERAPAN FONT STYLING <<
+
+
+ >> Property font styling : 
+
+    1. font-family = Mengatur jenis font yg akan digunakan
+
+       => Value -> nama font (Cth : arial, verdana), generic family (Cth : 
+		   sans-serif, serif)
+
+       => Penerapan -> Boleh lebih dari 1 value, value yg diterapkan dimulai 
+		       dari kiri, ke kanan jika font tersebut tidak ada di 
+		       system operasi
+
+       => Contoh : 
+
+		font-family: arial, verdana, sans-serif;
+
+       => Sans-serif = Font yg tdk memiliki kaki/ekor
+
+       => Serif = Font yg memiliki kaki/ekor
+
+    2. font-size = Mengatur ukuran font
+
+       => Value -> px, %, em()
+
+    3. font-weight = Mengatur ketebalan font
+
+       => Value -> lighter, normal, 100-900, bold, bolder
+
+    4. font-variant = Mengubah font menjadi small caps
+
+       => Value -> normal, small-caps (Huruf kapital, dgn ukuran huruf kecil)
+
+    5. font-style = Mengubah font menjadi bercetak miring
+
+       => Value -> normal, italic oblique
+
+       => Perbedaan italic dan oblique :
+
+	  1. Italic = Mengganti tipe font menjadi italic,jika font punya jenis 
+		      italic yg awalnya regular
+
+	  2. Oblique = System operasi memaksa tulisan menjadi huruf miring
+
+    6. line-height = Mengatur spasi antar baris
+
+       => Value -> normal, px dan em
+
+ >> Shorthand penulisan CSS Font : 
+
+    => Penerapan -> Gunakan property font utk menerapkan 6 property font
+
+    => Contoh : 
+
+	body {
+		font: italic normal bold 16px/18px helvatica, arial, sans-
+		serif;
+	}
+
+    => Urutan penulisan value = font-style, font-variant, font-weight, font-
+       size, line-height, font-family
+
+    => Value wajib ditulis = font-size dan font-family
+
+
+ >> TEXT STYLING <<
+
+
+ >> Web mencoba-coba nulis HTML, CSS dan JavaScript = codepen.io
+
+ >> Penulisan komentar di CSS = /*ini adalah komentar pada CSS*/
+
+ >> Property text styling :
+
+    1. color = Memberi warna pada tulisan
+
+       => Value -> nama warna (Cth : red), hexadecimal(Cth : #ff0000), 
+		   rgb(Cth : rgb(255, 0, 0))
+
+       => Hexadecimal = Bilangan terendah 6 digitnya adalah #000000 merupakan 
+			warna hitam dan bilangan tertinggi #ffffff merupakan 
+			warna putih
+
+       => Web penyedia warna serta hexadecimal dan kadar rgb = 
+	  www.colorpicker.com
+
+    2. text-align = Mengatur format paragraph/teks
+
+       => Value -> left (default), right, center, justify (rata kiri-kanan)
+
+    3. text-indent = Memberi indentasi pada paragraph/teks
+
+       => Value -> px dan %
+
+    4. text-decoration = Mengatur dekorasi pada teks
+
+       => Fungsi -> Utk menghilangkan garis bawah pada tag link (<a></a>)
+
+       => Value -> none, underline (garis Bawah tulisan), overline (garis atas 
+		   tulisan), line-through (garis coret tulisan)
+
+    5. text-transform = Mengubah jenis huruf menjadi huruf besar, 
+			kecil atau kapital
+
+       => Value -> none, lowercase, uppercase, capitalize
+
+    6. letter-spacing = Mengatur spasi antar huruf
+
+       => Value -> normal, px
+
+    7. word-spacing = Mengatur spasi antar kata
+
+       => Value -> normal, px
+
+
+ >> BACKGROUND <<
+
+
+ >> Property Background :
+
+    1. background-color = Mengatur warna background
+
+       => Value -> nama warna, hexadecimal dan rgb
+
+    2. background-image = Mengatur gambar yg digunakan utk background
+
+       => Value -> url(relative url)
+
+       => Penerapan -> Nama file gambar yg ada spasi, diganti dgn "%20". Jika 
+	  ukuran gambar kecil, gambar akan mengalami pengulangan sehingga 
+	  memenuhi sumbu-x dan y halaman secara default
+
+       => Resource gambar background berpola : subtlepatterns.com
+
+    3. background-position = Mengatur posisi gambar background
+
+       => Penerapan -> Jika terdapat background-repeat dgn value no-repeat, 
+		       kita bisa gunakan property ini utk mengatur posisi dari 
+		       gambar
+
+       => Value -> terhadap sumbu-y (top/center/bottom), terhadap sumbu-x 
+		   (left/center/right)
+
+       => Jika value terhadap sumbu-y ditulis bottom, maka gambar akan 
+	  menyamakan ukuran konten halaman yg ada, jika konten lebih kecil 
+	  dari ukuran sumbu-y gambar, maka gambar akan melebihi posisi atas 
+	  halaman 
+
+       => Solusinya gunakan tag <br> sebanyak mungkin agar ukuran isi konten 	  lebih besar dari tinggi gambar
+
+    4. background-repeat = Mengatur jenis pengulangan gambar background
+
+       => Value -> repeat-x, repeat-y, no-repeat, repeat
+
+ >> Shorthand penulisan property background : 
+
+    
+    => Penerapan -> Gunakan property background utk menerapkan 4 property 
+		    background
+
+    => Contoh : 
+
+	background: green url(gambar/moroccan-flower.png) center right 
+	no-repeat;
+
+    => Urutan penulisan value = background-color, background-image, 
+				background-posisition background-repeat
+
+    => Urutan background-color dan background-image bisa ditukar
+
+
+ >> SELECTOR BASIC <<
+
+
+ >> Selector = Mengenali elemen HTML yg akan diberi style
+
+ >> Jenis selector : 
+
+    1. Elemen HTML = <p></p>, <h1></h1>, <body></body>
+
+    2. id = atribut yg ditulis di dlm tag HTML (selectornya #(nama_id))
+
+    3. class = atribut yg ditulis di dlm tag HTML (selectornya .(nama_class))
+
+    4. complex selector
+
+ >> Selector grouping = Penulisan 2 atau lebih selector diberi property yg 
+			sama atau memberi spesifikasi pada selector
+
+    1. Selector grouping dgn "," : 
+
+       => Contoh : 
+
+		h1, h2{
+			color: green;
+		}
+
+    2. Selector grouping dgn " " (spasi) : 
+
+       => Contoh : 
+
+		ul li a{
+			color: orange;
+		}
+
+       => Penjelasannya -> Carikan tag a yg ada di dlm tag li, yg juga di dlm 
+	  tag ul, ubah warnanya jadi oren
+
+ >> Selector khusus = Utk menyeleksi salah satu dari elemen HTML yg sama 
+		      (Cth : salah satu dari tag <p></p>)
+
+    1. Contoh id (#) :
+
+		#p1{
+			color: orange;
+		}
+
+    2. Contoh class (.) : 
+
+		.p2{
+			color: red;
+		}
+
+ >> Ciri atribut id : 
+
+    1. Sebuah elemen HTML hanya boleh memiliki 1 id
+
+    2. Setiap halaman hanya boleh memiliki 1 elemen dgn id tersebut
+
+    3. Dpt digunakan sebagai penanda halaman utk link
+
+    4. Digunakan juga utk JavaScript
+
+    5. Sebaiknya tidak digunakan utk CSS (lebih baik gunakan class)
+
+ >> Skala prioritas selector : 1. Elemen HTML, 2. Class
+ 
+
+ >> PSEUDO CLASS <<
+
+
+ >> Pseudo class = Kelas semu yg dimiliki elemen HTML, yg buat kita bisa 
+		   definisikan style dgn "keadaan tertentu" dari elemen
+
+ >> Jenis pseudo class : 
+
+    1. Berhubungan dgn link : 
+
+       => :link = Style default pada link (tag a dgn atribut href), jarang 
+		  digunakan di CSS
+
+       => :hover = Style akan aktif saat kursor berada di atas link atau 
+		   elemen HTML
+
+       => :active = Style akan aktif saat link di-klik
+
+       => :visited = Style akan aktif ketika link sudah pernah dikunjungi pada 
+		     browser yg sama sebelumnya
+
+    2. Berhubungan dgn posisi elemen (1)/ada parent : 
+
+       => :first-child = Memilih elemen pertama dari parent/elemen pembungkus
+
+       => :last-child = Memilih elemen terakhir dari parent
+
+       => :nth-child(n) = Memilih elemen ke-n dari parent
+
+	  >> Fungsi -> Membuat table yg ketika di hover, maka warna akan 
+		       berubah (table dgn warna belang-belang saat hover)
+
+	  >> Contoh : 
+
+		li:nth-child(odd) a:hover{
+			color: red;
+		}
+
+	  >> n = urutan (Cth : 1, 2, ...), pola (Cth : (2n), (3n+2)), ganjil 
+		 (odd) dan genap (even)
+
+    3. Berhubungan dgn posisi elemen (2)/tanpa parent : 
+
+       => :first-of-type = Memilih elemen pertama dari tipe tag yg sama
+
+       => :last-of-type = Memilih elemen terakhir dari tipe tag yg sama
+
+
+ >> INHERITANCE <<
+
+
+ >> Inheritance = Sebuah elemen mewarisi beberapa nilai dari property yg 
+		  dimiliki oleh elemen parent-nya
+
+ >> Property yg diwariskan : color, font, letter-spacing, line-height, list-
+			     style, text-align, text-indent, text-transform, 
+			     visibility, white-space
+
+ >> Namun tag <a></a> secara default tdk mewarisi warna dari parentnya.     
+    Solusinya buat selector a, lalu gunakan value inherit agar warna parent 
+    diwarisi
+
+
+ >> SPECIFICITY <<
+
+
+ >> Specificity = Setiap deklarasi CSS, selector memiliki berat yg berbeda. 
+		  Berat itu menentukan seberapa spesifik elemen dpt dipilih 
+		  selector
+
+ >> Jika ada 2 selector dgn berat yg sama, diberi property yg sama dgn value 
+    berbeda, maka selector yg terseleksi adalah selector yg ditulis terakhir
+
+ >> Karena property pada selector terakhir akan meng-override property pada 
+    selector sebelumnya, karena berat selector sama
+
+ >> Kalau selector pertama lebih spesifik/beratnya lebih besar, maka yg 
+    digunakan adalah selector pertama
+
+ >> Penghitungan specificity selector : 
+
+    1. Elemen HTML = Bobotnya 1 digit
+
+    2. Class = Bobotnya 2 digit
+
+    3. Id = Bobotnya 3 digit
+
+    4. Inline (selector ditulis di file HTML) = Bobotnya 4 digit
+
+ >> Web utk menghitung berat specificity = specificity.keegan.st

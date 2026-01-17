@@ -1,0 +1,77 @@
+ >> CARA MENEMPATKAN CSS <<
+
+
+ >> 2 Cara menempatkan CSS : 
+
+    1. Di dlm file yg sama seperti HTML
+
+       => Penerapan -> 1. Embed = Menyimpan CSS di dlm tag head dgn 
+				  menggunakan tag <style></style>
+
+		       2. Inline = Menyisipkan CSS di dlm tag style dgn 
+				   menggunakan atribut style(Tidak Disarankan)
+
+    2. Terpisah dari file HTML, buat file baru dgn ekstensi .css
+
+       => Penerapan -> External = Membuat file CSS, lalu hubungkan dgn tag 
+				  <link> di dlm file HTML, dgn atribut rel dan 
+				  href, dimana hrefnya mengarah ke file css yg 
+				  kita buat
+
+ >> Sebelum menerapkan penempatan CSS, kita buat folder dan file baru dgn 
+    ekstensi .html
+
+ >> Lalu buat struktur html sederhana yg di dlm tag bodynya ada h1 dan di dlm 
+    tag h1 ada tulisan "Hello World", buat juga tag paragraph yg menyimpan 
+    "lorem" sebanyak 100 kata
+
+ >> Contoh sebelum penerapan : 
+
+	<h1>Hello World</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat 		enim voluptate cupiditate vero harum, ad nihil, at numquam? 		Blanditiis, quaerat! Doloremque sunt voluptatem quisquam 		architecto libero dolor commodi, qui voluptatum delectus, 		eaque iusto animi neque beatae sint ut quidem similique totam 		eligendi error reiciendis odit dicta ea maiores dolorem? 		Harum.</p>
+
+ >> Contoh penempatan CSS : 
+
+    1. Embed = Buat tag style di dlm head, lalu atributnya type dgn value 
+	       text/css(opsional bikin atribut type), ubah warna tag h1 
+	       menjadi biru cerah, ubah font nya menjadi arial
+
+       >> Contoh : 
+
+		<style>
+			h1{
+				color: lightblue;
+				font-family: arial;
+			}
+		</style>
+
+       >> Hasilnya, warna dari h1, berubah menjadi biru cerah
+
+    2. Inline = Masukkan atribut style dlm tag h1, lalu beri property dan 
+		value(Tidak Disarankan)
+
+       >> Contoh : 
+
+		<h1 style="color: lightblue; font-family: arial;">
+
+    3. External = Buat file lain dgn ekstensi .css, hubungkan dgn menulis tag 
+		  link di dlm tag head dgn atribut href mengarah ke file CSS. 
+		  Penulisan atribut href berlaku relative url
+
+       >> Contoh penulisan tag link : 
+
+		<link rel="stylesheet" href="style.css">
+
+       >> Dlm file CSS, gunakan selector utk mengarah ke h1 lalu buat property 
+	  color dgn value blue
+
+       >> Contoh external : 
+
+		h1{
+			color: blue;
+			font-family: arial;
+			font-size: 100px;
+		}
+
+       >> Hasilnya "Hello World" akan berwarna biru, dgn font arial dan ukuran 
+	  font 100 pixel

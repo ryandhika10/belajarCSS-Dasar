@@ -1,0 +1,128 @@
+ >> PENERAPAN TEXT STYLING <<
+
+
+ >> Text terkait dgn property pendukungnya seperti warna, indentasi, jarak 
+    antar kata, jarak antar huruf
+
+ >> Ada layanan web yg disebut dgn codepen.io, disana kita bisa tulis HTML, 
+    CSS dan JavaScript. Web ini otomatis menampilkan di kanan tampilannya dan 
+    merefresh sendiri
+
+ >> Penerapan Text Styling : 
+
+    => Buat terlebih dahulu file HTML dan CSS, di dlm file HTML buat tag h1 yg 
+       menyimpan tulisan "Hello World" dan tag p yg menyimpan tulisan lorem 
+       sebanyak 40 kata
+
+ >> CSS bisa diberi komentar : /*ini adalah komentar pada CSS*/
+
+ >> Property yg ada di text styling : 
+
+    1. color = Memberi warna pada tulisan
+
+    2. text-align = Mengatur format paragraph/teks
+
+    3. text-indent = Memberi indentasi pada paragraph/teks
+
+    4. text-decoration = Mengatur dekorasi pada teks. Biasa digunakan utk 
+			 menghilangkan garis bawah pada tag link
+
+    5. text-transform = Mengubah jenis huruf menjadi huruf besar, 
+			kecil/kapital
+
+    6. letter-spacing = Mengatur spasi antar huruf
+
+    7. word-spacing = Mengatur spasi antar kata
+
+ >> Penerapan property text styling : 
+
+    1. color = Value => nama warna(red, lightseagreen), hexadecimal(#ff0000), 
+			rgb(rgb(255, 0, 0))
+
+       => Contoh :
+
+		h1{
+			color: gold;
+		}
+
+       => Hasilnya tulisan pada tag h1 akan berubah menjadi warna emas
+
+       => hexadecimal = Bilangan terendah 0 sebanyak 6 digit(#000000) akan 
+			menjadi warna hitam dan bilangan tertinggi f sebanyak 
+			6 digit(#ffffff) akan menjadi warna putih
+
+       => Contoh hexadecimal : 
+
+		color: #abcabc;
+
+       => www.colorpicker.com = Web utk penyedia warna beserta hexadecimal dan 
+				kadar rgb
+
+       => Contoh rgb() : 
+
+	color: rgb(115, 80, 212);
+
+    2. text-align = Value => left(default), right, center, justify(rata 
+			     kiri-kanan)
+
+       => Contoh text-align :
+
+		p{
+			text-align: right;
+		}
+
+       => Hasilnya isi tulisan di paragraph akan menjadi rata kanan
+
+    3. text-indent = Value => px dan %
+
+       => Contoh : 
+
+		text-indent: 100px;
+
+       => Hasilnya akan memberikan indentasi sebesar 100 pixel
+
+    4. text-decoration = Value => none, underline(garis bawah tulisan), 
+       				  overline(garis atas tulisan), line-
+				  through(garis mencoret tulisan)
+
+       => Contoh : 
+
+		text-decoration: line-through;
+
+       => Hasilnya teks akan dicoret dgn garis
+
+       => Contoh text-decoration pada tag link : 
+
+	  >> Di HTML, tambahkan = <a href="#">Ini adalah link</a>
+
+	  >> Di CSS : 
+
+		a{
+			text-decoration: none;
+		}
+
+       => Hasilnya, garis bawah pada tulisan dlm tag a akan hilang
+
+    5. text-transform = Value => none, lowercase, uppercase, capitalize
+
+       => Contoh : 
+
+		text-transform: uppercase;
+
+       => Hasilnya, teks akan berubah jadi huruf besar semua
+
+    6. letter-spacing = Value => normal, px
+
+       => Contoh : 
+
+		letter-spacing: 5px;
+
+       => Maka jarak antar huruf bertambah sebesar 5 pixel
+
+    7. word-spacing = Value => normal, px
+
+       => Contoh : 
+
+		word-spacing: 10px;
+
+       => Jarak antar kata bertambah sebesar 10 pixel

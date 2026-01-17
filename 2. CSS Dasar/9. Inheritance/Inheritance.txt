@@ -1,0 +1,48 @@
+ >> PEWARISAN PADA CSS(INHERITANCE) <<
+
+
+ >> Inheritance CSS = Sebuah elemen mewarisi beberapa nilai dari property yg 
+		      dimiliki oleh element parent-nya
+
+ >> Properti yg diwariskan : 
+
+    1. color
+
+    2. font
+
+    3. letter-spacing
+
+    4. line-height
+
+    5. list-style
+
+    6. text-align
+
+    7. text-indent
+
+    8. text-transform
+
+    9. visibility
+
+    10. white-space
+
+ >> Contoh kasus : Di halaman kita, ada h1 berisi "Hello World", ada tag a 
+		   berisi "Kembali Ke Halaman Utama" dan ada tag p dgn isi 
+		   lorem
+
+    => Ketika diberi style pada tag body dgn property font-family arial dan 
+       color darkgrey, maka semua elemen HTML di dlm tag body akan mewarisi 
+       font arial dan warna tulisannya jadi darkgrey, kecuali tag a
+
+    => Karena tag a secara default tdk mewarisi nilai dari property color
+
+    => Solusi agar tag a mewarisi warna dari tag body, dgn memberi dia 
+       property color yg di dlmnya diisi value inherit
+
+       => Contoh : 
+
+		a{
+			color: inherit;
+		}
+
+       => Hasilnya tag a akan mengikuti warna parentnya, yaitu darkgrey

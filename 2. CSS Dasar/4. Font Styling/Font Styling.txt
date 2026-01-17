@@ -1,0 +1,116 @@
+ >> PENERAPAN FONT STYLING << 
+
+
+ >> Perbedaan font dan teks : 
+
+    1. Font terkait dgn typeface/tulisannya
+
+    2. Teks terkait dgn property pendukung
+
+ >> Property font : 
+
+    1. font-family = Mengatur jenis font yg akan digunakan (arial, Times New 
+		     Roman)
+
+    2. font-size = Mengatur ukuran font
+
+    3. font-weight = Mengatur ketebalan font(seperti bold)
+
+    4. font-variant = Mengubah font menjadi small caps
+
+    5. font-style = Mengubah font menjadi bercetak miring
+
+    6. line-height = Mengatur spasi antar baris
+
+ >> Penerapan masing-masing property : 
+
+    1. font-family = Value => nama font(arial, verdana), generic family(sans-
+			      serif, serif)
+
+       => Penerapan -> Bisa memberi lebih dari 1 value
+
+       => Contoh : Gunakan Penempatan External CSS
+
+		h1{
+			font-family: arial;
+		}
+
+       => Hasilnya h1 font nya akan berubah jadi arial. Kita bisa juga 
+	  menambahkan lebih dari 1 value. Font yg dicari pertama kali adalah 
+	  yg ditulis pertama, kalau tidak ada font di sistem operasinya, maka 
+	  akan mencari value selanjutnya
+
+       => Contoh value lebih dari 1 :
+
+		h1{
+			font-family: arial, verdana, sans-serif;
+		}
+
+       >> Sans-serif = Font yg tidak memiliki kaki
+
+       >> Serif = Font memiliki kaki
+
+    2. font-size = Value => px, %, em()
+
+       => Contoh : 
+
+		font-size: 100px;
+
+    3. font-weight = Value => lighter, normal, 100-900, bold, bolder
+
+       => Contoh font-weight pada h1 : 
+
+		font-weight: normal;
+
+       => Hasilnya ukuran default h1 yg awalnya tebal, jadi lebih tipis
+
+    4. font-variant = Value => normal, small-caps
+
+       => Contoh : 
+
+		font-variant: small-caps;
+
+       => Hasilnya, font yg awalnya bukan huruf kapital/huruf kecil akan jadi 
+	  huruf kapital dgn ukuran yg tetap layaknya huruf kecil
+
+    5. font-style = Value => normal, italic, oblique
+
+       => Perbedaan penggunaan value italic dan oblique : 
+
+	  1. Italic = Mengganti tipe font menjadi tipe font italic, jika 
+		      typeface/font punya jenis italic akan mengganti font 
+		      regular menjadi italic
+
+	  2. Oblique = Jika font tidak punya jenis italic, maka system operasi 
+		       memaksa konten menjadi huruf miring
+
+       => Contoh : 
+
+		font-style: italic;
+
+       => Hasilnya font akan menjadi miring
+
+    6. line-height = normal, px dan em
+
+       => Contoh : 
+
+		line-height: 50px;
+
+       => Hasilnya Jarak antar baris pada paragraph bertambah sebanyak 50px
+
+ >> Shorthand/singkatan penulisan CSS Font : 
+
+    => Dari ke 6 property, bisa diganti dgn 1 property saja, yaitu font
+
+    => Contoh : 
+
+	body {
+		font: italic normal bold 16px/18px helvatica, arial, sans-
+		serif;
+	}
+
+    => Urutan penulisan value shorthand = font-style, font-variant, font-
+       					  weight, font-size, line-height, 
+					  font-family
+
+    => Value wajib diisi di shorthand font = font-size dan font-family
